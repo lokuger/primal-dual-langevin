@@ -53,13 +53,15 @@ script.
 
 | Paper | Script | Output | Runtime* |
 |---|---|---|---|
-| Fig. 1, 2 (Sec. 5.1) | `experiments/gaussians1d.py` | `results/gaussians1d/` | |
-| Fig. 3, 4 (Sec. 5.2.1) | `experiments/l2tv_toy2d.py` | `results/l2tv-2d/` | |
-| Fig. 5, 6 (Sec. 5.2.2) | `experiments/l2tv_denoising.py` | `results/l2tv-images/` | |
-| Fig. 7 (Sec. 5.3) | `experiments/l2tgv_denoising.py` | `results/l2tgv-images/` | |
-| Fig. 8 (Sec. 5.4) | `experiments/kltv_inpainting.py` | `results/kltv-inpainting/` | |
+| Fig. 1, 2 (Sec. 5.1) | `experiments/gaussians1d.py` | `results/gaussians1d/` | 5 min |
+| Fig. 3, 4 (Sec. 5.2.1) | `experiments/l2tv_toy2d.py` | `results/l2tv-2d/` | 4 runs, 45 min each |
+| Fig. 5, 6 (Sec. 5.2.2) | `experiments/l2tv_denoising.py` | `results/l2tv-images/` | 4 runs, 30 min each |
+| Fig. 7 (Sec. 5.3) | `experiments/l2tgv_denoising.py` | `results/l2tgv-images/` | 2 images, 15 min each |
+| Fig. 8 (Sec. 5.4) | `experiments/kltv_inpainting.py` | `results/kltv-inpainting/` | 1.5 min |
 
-\* on [machine], single core.
+\* on a MacBook Air M4 (16 GB RAM). Each run uses a single core; runs of the same
+experiment were executed in parallel with `--runs` (2D toy, L2-TV) or `--images` (TGV).
+The 2D toy runs are dominated by the 20 Wasserstein distance evaluations per run using [POT](https://pythonot.github.io/).
 
 ```bash
 python experiments/gaussians1d.py

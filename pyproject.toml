@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdlangevin"
+version = "1.0.0"
+description = "Primal-dual Langevin sampling: code and experiments of the accompanying paper"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Lorenz Kuger", email = "mail@lorenzkuger.de" }]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.1",
+    "scipy",
+    "matplotlib",
+    "scikit-image",
+    "POT",
+    # odl before the array-API rewrite of odl 1.0; that version is not compatible.
+    "odl @ git+https://github.com/odlgroup/odl@862c6a6d5592f8166e8f2f0b77764a0c2931129a",
+]
+
+[tool.setuptools]
+packages = ["pdlangevin"]

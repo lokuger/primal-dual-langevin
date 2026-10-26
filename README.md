@@ -81,7 +81,7 @@ If you use this code, please cite
   author  = {Burger, Martin and Ehrhardt, Matthias J. and Kuger, Lorenz and Weigand, Lukas},
   title   = {Analysis of Primal-Dual {L}angevin Algorithms},
   journal = {Foundations of Computational Mathematics},
-  year    = {2026},
+  year    = {2027},
   note    = {To appear},
 }
 ```
